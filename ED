@@ -1,0 +1,24 @@
+<?php
+
+namespace ED;
+
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerRespawnEvent;
+use pocketmine\Player;
+use pocketmine\plugin\PluginBase;
+use pocketmine\Server;
+use pocketmine\utils\TextFormat;
+
+class MainClass extends PluginBase implements Listener{
+
+	public function onLoad(){
+		$this->getLogger()->info(TextFormat::WHITE . "I've been loaded!");
+	}
+
+	public function onEnable(){
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		$this->getLogger()->info(TextFormat::DARK_GREEN . "ha sido activado ED!");
+    }
+    }
